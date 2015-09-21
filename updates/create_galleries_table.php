@@ -5,11 +5,9 @@ use October\Rain\Database\Updates\Migration;
 
 class CreateGalleriesTable extends Migration
 {
-
     public function up()
     {
-        Schema::create('raviraj_rjgallery_galleries', function($table)
-        {
+        Schema::create('raviraj_rjgallery_galleries', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
@@ -21,5 +19,4 @@ class CreateGalleriesTable extends Migration
     {
         Schema::dropIfExists('raviraj_rjgallery_galleries');
     }
-
 }

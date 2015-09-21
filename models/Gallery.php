@@ -16,6 +16,7 @@ class Gallery extends Model
     public $rules = [
         'name' => 'required|between:3,64',
     ];
+
     /**
      * @var array Guarded fields
      */
@@ -29,16 +30,7 @@ class Gallery extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
-    public $hasMany = [];
-    public $belongsTo = [];
-    public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
     public $attachMany = [
         'images' => ['System\Models\File', 'order' => 'sort_order'],
     ];
-
 }

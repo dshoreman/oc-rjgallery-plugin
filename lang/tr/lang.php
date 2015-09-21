@@ -9,43 +9,43 @@ return [
         'all' => 'Manage galleries'
     ],
     'misc' => [
-    	'newgallery' => 'Yeni Galeri',
-    	'sure' => 'Silmek istediğinize emin misiniz?',
-    	'remove' => 'Sil',
+        'newgallery' => 'Yeni Galeri',
+        'sure' => 'Silmek istediğinize emin misiniz?',
+        'remove' => 'Sil',
         'title' => 'Başlık',
         'description' => 'Galerinin başlığı',
         'defaultname' => 'Galeri'
     ],
     'form' => [
-    	'create' => 'Galeri Oluştur',
-    	'update' => 'Galerileri Güncelle',
-    	'preview' => 'Galerileri Önizle',
-    	'manage' => 'Galerileri Yönet'
+        'create' => 'Galeri Oluştur',
+        'update' => 'Galerileri Güncelle',
+        'preview' => 'Galerileri Önizle',
+        'manage' => 'Galerileri Yönet'
     ],
     'modeldata' => [
-    	'name' => 'Galeri Adı',
-    	'created' => 'Oluşturulma',
-    	'updated' => 'Güncellenme',
-    	'images' => 'Resimler'
+        'name' => 'Galeri Adı',
+        'created' => 'Oluşturulma',
+        'updated' => 'Güncellenme',
+        'images' => 'Resimler'
     ],
     'create' => [
-    	'galleries' => 'Galeriler',
-    	'creating' => 'Galeri Oluşturuluyor...',
-    	'create' => 'Oluştur',
-    	'createclose' => 'Oluştur ve Kapat',
-    	'cancel' => 'İptal',
-    	'or' => 'veya',
-    	'return' => 'Galeri listesine geri dön'
+        'galleries' => 'Galeriler',
+        'creating' => 'Galeri Oluşturuluyor...',
+        'create' => 'Oluştur',
+        'createclose' => 'Oluştur ve Kapat',
+        'cancel' => 'İptal',
+        'or' => 'veya',
+        'return' => 'Galeri listesine geri dön'
     ],
     'update' => [
-    	'saving' => 'Galeri Kaydediliyor...',
-    	'save' => 'Kaydet',
-    	'saveclose' => 'Kaydet ve Kapat',
-    	'deleting' => 'Galeri Siliniyor...',
-    	'reallydelete' => 'Galeriyi silmek istediğinize emin misiniz?'
+        'saving' => 'Galeri Kaydediliyor...',
+        'save' => 'Kaydet',
+        'saveclose' => 'Kaydet ve Kapat',
+        'deleting' => 'Galeri Siliniyor...',
+        'reallydelete' => 'Galeriyi silmek istediğinize emin misiniz?'
     ],
     'menu' => [
-    	'name' => 'Resim Galerisi',
+        'name' => 'Resim Galerisi',
         'description' => 'Tam ekran önizleme ve slayt gösterisi olan bir fotoğraf galerisi oluşturun'
     ],
     'groups' => [

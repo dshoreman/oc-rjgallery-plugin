@@ -172,8 +172,7 @@ class Gallery extends ComponentBase
 
     public function onRun()
     {
-        if($this->property('jqueryinject')=="yes")
-        {
+        if ($this->property('jqueryinject')=="yes") {
             $this->addJs('assets/js/jquery-1.9.1.min.js');
         }
         $this->addJs('assets/js/lightGallery.min.js');
@@ -190,5 +189,4 @@ class Gallery extends ComponentBase
             $this->page[$key] = $value;
         }
     }
-
 }

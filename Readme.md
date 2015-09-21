@@ -67,7 +67,6 @@ The next example shows usage of `gallery` component:
 	height = "70"
 	width = "100"
 	==
-	<!-- Gallery -->
 	<div class="container-fluid">
 		<div class="row">
 			<!-- Make your own style div wrapper for gallery -->
@@ -76,4 +75,3 @@ The next example shows usage of `gallery` component:
 			</div>
 		</div>
 	</div>
-	<!-- End Gallery -->

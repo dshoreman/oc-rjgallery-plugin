@@ -10,7 +10,6 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
-
     /**
      * Returns information about this plugin.
      *
@@ -37,8 +36,8 @@ class Plugin extends PluginBase
     {
         return [
             'gallery' => [
-                'label' => 'raviraj.rjgallery::lang.menu.name',
-                'url'   => Backend::url('raviraj/rjgallery/galleries'),
+                'label'       => 'raviraj.rjgallery::lang.menu.name',
+                'url'         => Backend::url('raviraj/rjgallery/galleries'),
                 'icon'        => 'icon-picture-o',
                 'permissions' => ['raviraj.rjgallery.*'],
                 'order'       => 500,
@@ -49,7 +48,10 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'raviraj.rjgallery.*' => ['tab' => 'raviraj.rjgallery::lang.plugin.name', 'label' => 'raviraj.rjgallery::lang.permissions.all']
+            'raviraj.rjgallery.*' => [
+                'tab' => 'raviraj.rjgallery::lang.plugin.name',
+                'label' => 'raviraj.rjgallery::lang.permissions.all',
+            ],
         ];
     }
 }

@@ -6,7 +6,6 @@ fields:
     name:
         span: full
         label: raviraj.rjgallery::lang.modeldata.name
-
     images:
         label: raviraj.rjgallery::lang.modeldata.images
         type: fileupload

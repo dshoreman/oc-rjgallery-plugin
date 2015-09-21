@@ -1,6 +1,10 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>"><?= e(trans('raviraj.rjgallery::lang.create.galleries')); ?></a></li>
+        <li>
+            <a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>">
+                <?= e(trans('raviraj.rjgallery::lang.create.galleries')); ?>
+            </a>
+        </li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -33,7 +37,10 @@
                     <?= e(trans('raviraj.rjgallery::lang.create.createclose')); ?>
                 </button>
                 <span class="btn-text">
-                    <?= e(trans('raviraj.rjgallery::lang.create.or')); ?> <a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>"><?= e(trans('raviraj.rjgallery::lang.create.cancel')); ?></a>
+                    <?= e(trans('raviraj.rjgallery::lang.create.or')); ?>
+                    <a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>">
+                        <?= e(trans('raviraj.rjgallery::lang.create.cancel')); ?>
+                    </a>
                 </span>
             </div>
         </div>
@@ -43,6 +50,10 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>" class="btn btn-default"><?= e(trans('raviraj.rjgallery::lang.create.return')); ?></a></p>
+    <p>
+        <a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>" class="btn btn-default">
+            <?= e(trans('raviraj.rjgallery::lang.create.return')); ?>
+        </a>
+    </p>
 
 <?php endif ?>

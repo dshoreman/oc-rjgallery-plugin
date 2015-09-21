@@ -9,43 +9,43 @@ return [
         'all' => 'Manage galleries'
     ],
     'misc' => [
-    	'newgallery' => 'Новая галерея',
-    	'sure' => 'Вы уверены?',
-    	'remove' => 'Удалить',
+        'newgallery' => 'Новая галерея',
+        'sure' => 'Вы уверены?',
+        'remove' => 'Удалить',
         'title' => 'Название',
         'description' => 'Название галереи',
         'defaultname' => 'Галерея'
     ],
     'form' => [
-    	'create' => 'Create Galleries',
-    	'update' => 'Update Galleries',
-    	'preview' => 'Preview Galleries',
-    	'manage' => 'Manage Galleries'
+        'create' => 'Create Galleries',
+        'update' => 'Update Galleries',
+        'preview' => 'Preview Galleries',
+        'manage' => 'Manage Galleries'
     ],
     'modeldata' => [
-    	'name' => 'Название',
-    	'created' => 'Создана',
-    	'updated' => 'Обновлена',
-    	'images' => 'Изображения'
+        'name' => 'Название',
+        'created' => 'Создана',
+        'updated' => 'Обновлена',
+        'images' => 'Изображения'
     ],
     'create' => [
-    	'galleries' => 'Галереи',
-    	'creating' => 'Создание галереи...',
-    	'create' => 'Создать',
-    	'createclose' => 'Создать и выйти',
-    	'cancel' => '&nbsp;Отмена',
-    	'or' => 'или',
-    	'return' => 'Вернуться к списку галерей'
+        'galleries' => 'Галереи',
+        'creating' => 'Создание галереи...',
+        'create' => 'Создать',
+        'createclose' => 'Создать и выйти',
+        'cancel' => '&nbsp;Отмена',
+        'or' => 'или',
+        'return' => 'Вернуться к списку галерей'
     ],
     'update' => [
-    	'saving' => 'Сохранение галереи...',
-    	'save' => 'Сохранить',
-    	'saveclose' => 'Сохранить и выйти',
-    	'deleting' => 'Уделаение галереи...',
-    	'reallydelete' => 'Вы и в правду хотите удалить галерею?'
+        'saving' => 'Сохранение галереи...',
+        'save' => 'Сохранить',
+        'saveclose' => 'Сохранить и выйти',
+        'deleting' => 'Уделаение галереи...',
+        'reallydelete' => 'Вы и в правду хотите удалить галерею?'
     ],
     'menu' => [
-    	'name' => 'Фотогалерея',
+        'name' => 'Фотогалерея',
         'description' => 'Create a photo gallery with full screen preview and slideshow'
     ],
     'groups' => [
