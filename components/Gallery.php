@@ -18,9 +18,9 @@ class Gallery extends ComponentBase
     {
         return [
             'idGallery' => [
-                'title'        => 'raviraj.rjgallery::lang.idgallery.title',
-                'description'  => 'raviraj.rjgallery::lang.idgallery.description',
-                'type'         => 'dropdown',
+                'title'             => 'raviraj.rjgallery::lang.idgallery.title',
+                'description'       => 'raviraj.rjgallery::lang.idgallery.description',
+                'type'              => 'dropdown',
             ],
             'lang' => [
                 'title'             => 'raviraj.rjgallery::lang.misc.title',
@@ -33,7 +33,7 @@ class Gallery extends ComponentBase
                 'description'       => 'raviraj.rjgallery::lang.jqueryinject.description',
                 'type'              => 'dropdown',
                 'default'           => 'yes',
-                'options'           => ['yes'=>'raviraj.rjgallery::lang.jqueryinject.optionsyes','no'=>'raviraj.rjgallery::lang.jqueryinject.optionsno']
+                'options'           => $this->getOptionsArray('jqueryinject'),
             ],
             'thumbnail' => [
                 'title'             => 'raviraj.rjgallery::lang.thumbnail.title',
@@ -41,7 +41,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'true',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.options'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.thumbnail.optionstrue','false'=>'raviraj.rjgallery::lang.thumbnail.optionsfalse']
+                'options'           => $this->getOptionsArray('thumbnail'),
             ],
             'caption' => [
                 'title'             => 'raviraj.rjgallery::lang.caption.title',
@@ -49,7 +49,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'true',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.options'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.caption.optionstrue','false'=>'raviraj.rjgallery::lang.caption.optionsfalse']
+                'options'           => $this->getOptionsArray('caption'),
             ],
             'desc' => [
                 'title'             => 'raviraj.rjgallery::lang.desc.title',
@@ -57,7 +57,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'true',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.options'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.desc.optionstrue','false'=>'raviraj.rjgallery::lang.desc.optionsfalse']
+                'options'           => $this->getOptionsArray('desc'),
             ],
             'counter' => [
                 'title'             => 'raviraj.rjgallery::lang.counter.title',
@@ -65,7 +65,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'true',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.options'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.counter.optionstrue','false'=>'raviraj.rjgallery::lang.counter.optionsfalse']
+                'options'           => $this->getOptionsArray('counter'),
             ],
             'controls' => [
                 'title'             => 'raviraj.rjgallery::lang.controls.title',
@@ -73,7 +73,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'true',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.options'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.controls.optionstrue','false'=>'raviraj.rjgallery::lang.controls.optionsfalse']
+                'options'           => $this->getOptionsArray('controls'),
             ],
             'preload' => [
                 'title'             => 'raviraj.rjgallery::lang.preload.title',
@@ -91,7 +91,10 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'slide',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.effects'),
-                'options'           => ['slide'=>'raviraj.rjgallery::lang.mode.optionsslide','fade'=>'raviraj.rjgallery::lang.mode.optionsfade']
+                'options'           => [
+                    'slide'=>'raviraj.rjgallery::lang.mode.optionsslide',
+                    'fade'=>'raviraj.rjgallery::lang.mode.optionsfade'
+                ],
             ],
             'speed' => [
                 'title'             => 'raviraj.rjgallery::lang.speed.title',
@@ -108,7 +111,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'true',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.effects'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.loop.optionstrue','false'=>'raviraj.rjgallery::lang.loop.optionsfalse']
+                'options'           => $this->getOptionsArray('loop'),
             ],
             'auto' => [
                 'title'             => 'raviraj.rjgallery::lang.auto.title',
@@ -116,7 +119,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'false',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.effects'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.auto.optionstrue','false'=>'raviraj.rjgallery::lang.auto.optionsfalse']
+                'options'           => $this->getOptionsArray('auto'),
             ],
             'pause' => [
                 'title'             => 'raviraj.rjgallery::lang.pause.title',
@@ -133,7 +136,7 @@ class Gallery extends ComponentBase
                 'type'              => 'dropdown',
                 'default'           => 'true',
                 'group'             => Lang::get('raviraj.rjgallery::lang.groups.effects'),
-                'options'           => ['true'=>'raviraj.rjgallery::lang.escKey.optionstrue','false'=>'raviraj.rjgallery::lang.escKey.optionsfalse']
+                'options'           => $this->getOptionsArray('escKey'),
             ],
             'height' => [
                 'title'             => 'raviraj.rjgallery::lang.height.title',
@@ -158,14 +161,33 @@ class Gallery extends ComponentBase
                 'description'       => 'raviraj.rjgallery::lang.resizer.description',
                 'type'              => 'dropdown',
                 'default'           => 'auto',
-                'options'           => ['auto' => 'raviraj.rjgallery::lang.resizer.optionsauto', 'exact' => 'raviraj.rjgallery::lang.resizer.optionsexact', 'portrait' => 'raviraj.rjgallery::lang.resizer.optionsportrait', 'landscape' => 'raviraj.rjgallery::lang.resizer.optionslandscape', 'crop' => 'raviraj.rjgallery::lang.resizer.optionscrop'],
-                'group'             => Lang::get('raviraj.rjgallery::lang.groups.thumbs')
-            ]
+                'group'             => Lang::get('raviraj.rjgallery::lang.groups.thumbs'),
+                'options'           => [
+                    'auto'      => 'raviraj.rjgallery::lang.resizer.optionsauto',
+                    'crop'      => 'raviraj.rjgallery::lang.resizer.optionscrop',
+                    'exact'     => 'raviraj.rjgallery::lang.resizer.optionsexact',
+                    'landscape' => 'raviraj.rjgallery::lang.resizer.optionslandscape',
+                    'portrait'  => 'raviraj.rjgallery::lang.resizer.optionsportrait',
+                ],
+            ],
         ];
     }
 
+    protected function getOptionsArray($property)
+    {
+        $optionString = "raviraj.rjgallery::lang.%s.options%s";
 
-    public function getidGalleryOptions()
+        $formal   = $property != 'jqueryinject';
+        $trueVal  = $formal ? 'true' : 'yes';
+        $falseVal = $formal ? 'false' : 'no';
+
+        return [
+            $trueVal  => sprintf($optionString, $property, $falseVal),
+            $falseVal => sprintf($optionString, $property, $trueVal),
+        ];
+    }
+
+    public function getIdGalleryOptions()
     {
         return Galleries::select('id', 'name')->orderBy('name')->get()->lists('name', 'id');
     }
