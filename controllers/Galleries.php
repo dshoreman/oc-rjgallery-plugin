@@ -27,16 +27,12 @@ class Galleries extends Controller
 
     public function index_onDelete()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $itemId) {
-                if (!$slider = Gallery::find($itemId)) {
-                    continue;
-                }
+        $checked = post('checked');
 
-                $slider->delete();
-            }
+        if (is_array($checked) && count($checked)) {
+            Gallery::destroy($checked);
 
-            Flash::success('Successfully deleted those selected.');
+            Flash::success('Successfully deleted the selected galleries.');
         }
 
         return $this->listRefresh();
