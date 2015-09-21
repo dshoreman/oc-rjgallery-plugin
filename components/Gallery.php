@@ -1,7 +1,7 @@
 <?php namespace Raviraj\Rjgallery\Components;
 
 use Cms\Classes\ComponentBase;
-use Raviraj\Rjgallery\Models\Gallery as Galleries;
+use Raviraj\Rjgallery\Models\Gallery as GalleryModel;
 use Lang;
 
 class Gallery extends ComponentBase
@@ -189,7 +189,7 @@ class Gallery extends ComponentBase
 
     public function getIdGalleryOptions()
     {
-        return Galleries::select('id', 'name')->orderBy('name')->get()->lists('name', 'id');
+        return GalleryModel::getDropdownOptions();
     }
 
     public function onRun()
@@ -203,12 +203,10 @@ class Gallery extends ComponentBase
 
     public function onRender()
     {
-        $gallery = new Galleries;
-        $this->gallery = $this->page['gallery'] = $gallery->where('id', '=', $this->property('idGallery'))->first();
-
-         // Inject all gallery properties to page.
         foreach ($this->getProperties() as $key => $value) {
             $this->page[$key] = $value;
         }
+
+        $this->page['gallery'] = GalleryModel::findById($this->page['idGallery']);
     }
 }

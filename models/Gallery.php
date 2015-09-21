@@ -33,4 +33,14 @@ class Gallery extends Model
     public $attachMany = [
         'images' => ['System\Models\File', 'order' => 'sort_order'],
     ];
+
+    public static function findById($id)
+    {
+        return self::whereId($id)->first();
+    }
+
+    public static function getDropdownOptions()
+    {
+        return self::orderBy('name')->lists('name', 'id');
+    }
 }
