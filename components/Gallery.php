@@ -6,6 +6,8 @@ use Lang;
 
 class Gallery extends ComponentBase
 {
+    public $gallery;
+
     public function componentDetails()
     {
         return [
@@ -194,6 +196,8 @@ class Gallery extends ComponentBase
 
     public function onRun()
     {
+        $this->prepareVars();
+
         if ($this->property('jqueryinject')=="yes") {
             $this->addJs('assets/js/jquery-1.9.1.min.js');
         }
@@ -203,10 +207,19 @@ class Gallery extends ComponentBase
 
     public function onRender()
     {
+        $this->prepareVars();
+    }
+
+    protected function prepareVars()
+    {
         foreach ($this->getProperties() as $key => $value) {
             $this->page[$key] = $value;
         }
 
         $this->page['gallery'] = GalleryModel::findById($this->page['idGallery']);
+
+        if (!isset($this->gallery)) {
+            $this->gallery = $this->page['gallery'];
+        }
     }
 }
