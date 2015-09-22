@@ -216,10 +216,21 @@ class Gallery extends ComponentBase
             $this->page[$key] = $value;
         }
 
-        $this->page['gallery'] = GalleryModel::findById($this->page['idGallery']);
+        $this->page['gallery'] = $this->loadGallery();
 
         if (!isset($this->gallery)) {
             $this->gallery = $this->page['gallery'];
         }
+    }
+
+    protected function loadGallery()
+    {
+        $gallery = GalleryModel::findById($this->page['idGallery']);
+
+        $gallery->images->each(function($image) {
+            $image->description = nl2br($image->description);
+        });
+
+        return $gallery;
     }
 }
