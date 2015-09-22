@@ -58,8 +58,8 @@ $(document).ready(function() {
 <div style="width:100%">
     <ul id="{{ __SELF__ }}" class="{{ __SELF__ }}">
         {% for image in __SELF__.gallery.images %}
-        <li data-src="{{ image.path }}
-             data-title="{{ image.title }}
+        <li data-src="{{ image.path }}"
+             data-title="{{ image.title }}"
              data-desc="{{ image.description }}">
             <a href="#">
                 <img src="{{ image.getThumb(width, height, resizer) }}"
